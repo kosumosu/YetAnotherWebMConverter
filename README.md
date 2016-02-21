@@ -18,12 +18,14 @@ Start Time
 
 Enter the start time in format hh:mm:ss.
 
+	00:07:18
 	00:43:54.901341
 
 Stop Time
 
 Enter the stop time in hh:mm:ss.
 
+	00:08:18
 	01:34:12.123
 
 Target size
