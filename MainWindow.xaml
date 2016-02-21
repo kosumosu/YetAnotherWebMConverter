@@ -42,7 +42,7 @@
             <TextBox Grid.Row="3" Grid.Column="1" MaxLines="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Text="{Binding EndTime}"/>
 
             <Label Content="Target Size (MB)" Grid.Row="4" Grid.Column="0"/>
-            <TextBox Grid.Row="4" Grid.Column="1" MaxLines="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Text="{Binding SizeLimitInMegabytes}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" MaxLines="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Text="{Binding TargetSizeInMegabytes}"/>
 
             <Label Content="Audio" Grid.Row="5" Grid.Column="0"/>
             <DockPanel Grid.Row="5" Grid.Column="1">
