@@ -1,4 +1,4 @@
-WebM Converter
+Yet Another WebM Converter (YAWMC)
 =========
 ![Screenshot](http://s22.postimg.org/nv82aq15t/yawmc.png)
 Downloads
