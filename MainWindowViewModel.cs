@@ -29,7 +29,7 @@ namespace WebM_Converter
 		private string _destinationVideoFileName = string.Empty;
 		private TimeSpan _startTime = TimeSpan.Zero;
 		private TimeSpan _endTime = TimeSpan.Zero;
-		private decimal _sizeLimitInMegabytes = 20m;
+		private decimal _targetSizeInMegabytes = 20m;
 		private bool _enableAudio = true;
 		private int _audioBitrate = 96;
 		private int _outputVideoWidth = -1;
@@ -91,13 +91,13 @@ namespace WebM_Converter
 			}
 		}
 
-		public decimal SizeLimitInMegabytes
+		public decimal TargetSizeInMegabytes
 		{
-			get { return _sizeLimitInMegabytes; }
+			get { return _targetSizeInMegabytes; }
 
 			set
 			{
-				Set(() => SizeLimitInMegabytes, ref _sizeLimitInMegabytes, value);
+				Set(() => TargetSizeInMegabytes, ref _targetSizeInMegabytes, value);
 			}
 		}
 
@@ -266,7 +266,7 @@ namespace WebM_Converter
 						{
 							IsBusy = true;
 							Task.Run(async () =>
-								await _videoFile.Convert(_destinationVideoFileName, _startTime, _endTime - _startTime, _outputVideoWidth, _outputVideoHeight, _crop, (long)(_sizeLimitInMegabytes * 1024 * 1024), _enableAudio, _audioBitrate * 1000)
+								await _videoFile.Convert(_destinationVideoFileName, _startTime, _endTime - _startTime, _outputVideoWidth, _outputVideoHeight, _crop, (long)(_targetSizeInMegabytes * 1024 * 1024), _enableAudio, _audioBitrate * 1000)
 									.ContinueWith(task => IsBusy = false)
 							);
 						},
